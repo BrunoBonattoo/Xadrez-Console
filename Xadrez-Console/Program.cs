@@ -1,24 +1,18 @@
 ﻿using System;
 using tabuleiro;
 using xadrez;
+using Xadrez_Console.xadrez;
+
 namespace Xadrez_Console
 {
     class Program
     {
         static void Main(string[] args)
         {
-            try { 
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            PosicaoXadrez pos = new PosicaoXadrez('a', 1);
 
-            tab.colocarPeca(new Torre(tab,Cor.Preta), new Posicao(0, 0));
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            tab.colocarPeca(new Rei(tab,Cor.Preta), new Posicao(0, 0));
-            Tela.ImprimirTabuleiro(tab);
-            }
-            catch(TabuleiroExeception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine(pos);
+            Console.WriteLine(pos.toPosicao());
         }
     }
 }
