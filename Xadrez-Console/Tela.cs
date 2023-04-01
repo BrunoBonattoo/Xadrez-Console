@@ -38,7 +38,7 @@ namespace Xadrez_Console
             Console.WriteLine();
             Console.Write("Pretas: ");
             ConsoleColor aux = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
             Console.ForegroundColor = aux;
             Console.WriteLine();
@@ -58,7 +58,7 @@ namespace Xadrez_Console
         {
             for (int i = 0; i < tab.linhas; i++)
             {
-                Console.Write(8 - i + " ");
+                Console.Write(8 - i + "  ");
                 for (int j = 0; j < tab.colunas; j++)
                 {
                     ImprimirPeca(tab.peca(i, j));
@@ -74,7 +74,7 @@ namespace Xadrez_Console
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
             for (int i = 0; i < tab.linhas; i++)
             {
-                Console.Write(8 - i + " ");
+                Console.Write(8 - i + "  ");
                 for (int j = 0; j < tab.colunas; j++)
                 {
                     if (possicoesPossiveis[i, j])
@@ -117,7 +117,7 @@ namespace Xadrez_Console
                 else
                 {
                     ConsoleColor aux = Console.ForegroundColor;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.Write(peca);
                     Console.ForegroundColor = aux;
 
